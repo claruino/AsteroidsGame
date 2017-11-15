@@ -5,7 +5,6 @@ ArrayList <Asteroids> someAsteroids = new ArrayList <Asteroids>();
 public void setup() 
 {
   size(400, 400);
-  bob = new Spaceship();
   someStars = new Stars[900];
   
   for(int i = 0; i < someStars.length; i++)
@@ -17,6 +16,8 @@ public void setup()
   {
     someAsteroids.add(new Asteroids ());
   }
+  
+  bob = new Spaceship();
 }
 public void draw() 
 {
