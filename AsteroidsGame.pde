@@ -1,18 +1,17 @@
 Spaceship bob; 
-Stars someStars[];
+Stars[]  someStars = new Stars[900];
 
 ArrayList <Asteroids> someAsteroids = new ArrayList <Asteroids>(); 
 public void setup() 
 {
   size(400, 400);
-  someStars = new Stars[900];
   
   for(int i = 0; i < someStars.length; i++)
   {
     someStars[i] = new Stars();
   }
   
-  for(int i = 0; i < 500; i++)
+  for(int i = 0; i < 100; i++)
   {
     someAsteroids.add(new Asteroids ());
   }
@@ -32,6 +31,13 @@ public void draw()
   {
     someAsteroids.get(i).show();
     someAsteroids.get(i).move();
+  }
+  for(int i = 0; i < someAsteroids.size(); i++)
+  {
+    if(dist(bob.getX(), bob.getY(), someAsteroids.get(i).getX(), someAsteroids.get(i).getY()) < 20)
+    {
+      someAsteroids.remove(i);
+    }
   }
 }
 
