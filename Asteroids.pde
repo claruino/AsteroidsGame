@@ -21,7 +21,7 @@ class Asteroids extends Floater
   //OVERRIDING MOVE METHOD FROM FLOATER not done
   public void move ()   //move the floater in the current direction of travel
   {      
-    rotate((int)(myRotSpeed));
+    turn((int)(myRotSpeed));
     super.move();
   }  
   

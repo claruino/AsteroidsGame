@@ -13,6 +13,13 @@ class Spaceship extends Floater
     yCorners[2] = 16;
     xCorners[3] = -4;
     yCorners[3] = 0;
+    
+    myCenterX = 200;
+    myCenterY = 200;
+    myDirectionX = 0;
+    myDirectionY = 0;
+    myPointDirection = 0;
+    myColor = color(224, 176, 242);
   }
   
   public void setX(int x){myCenterX = x;};  
@@ -28,7 +35,7 @@ class Spaceship extends Floater
   
   public void show ()  //Draw ship at the current position
   {
-    fill(224, 176, 242);
+    fill(myColor);
     //convert degrees to radians for sin and cos
     double dRadians = myPointDirection*(Math.PI/180);
     int xRotatedTranslated, yRotatedTranslated;
